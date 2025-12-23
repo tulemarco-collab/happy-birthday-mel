@@ -506,7 +506,7 @@
             const now = clock.getElapsedTime(); if (now - lastSwitchTime < SWITCH_COOLDOWN) return; 
             lastSwitchTime = now; isGalleryMode = !isGalleryMode; const indicator = document.getElementById('mode-indicator');
             if (isGalleryMode) {
-                indicator.innerText = "MODE: PHOTO GALLERY"; 
+                indicator.innerText = "ẢNH ĐẸP NÈ"; 
                 indicator.style.color = "#FFD700"; 
                 
                 gsap.to(window, { duration: 1.2, jarOffsetY: -8, ease: "power2.inOut" }); 
@@ -519,7 +519,7 @@
                     gsap.to(polaroid.material, { opacity: 1, duration: 0.8, delay: index * 0.03 });
                 });
             } else {
-                indicator.innerText = "MODE: JAR CONTROL"; 
+                indicator.innerText = "YÊU YÊU"; 
                 indicator.style.color = "rgba(255, 215, 0, 0.7)"; 
                 
                 gsap.to(window, { duration: 1.2, jarOffsetY: 0, ease: "back.out(0.8)", delay: 0.2 }); 
